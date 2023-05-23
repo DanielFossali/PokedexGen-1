@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: Poppins, sans-serif;
+    max-width: 1280px;
+    margin: auto;
+    background-image: url(./Wireframe\ -\ 2.svg);
+    color: #f5f5f5;
+}
+
+.modo-escuro {
+    background-image:url(./Wireframe\ -\ 5.svg);
+    color: #000000;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+header .logo,
+header .image-botao{
+    width:30px;
+}
+
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .image-botao:hover,
+main .planta:hover,
+main .fogo:hover,
+main .agua:hover,
+main .normal:hover,
+main .veneno:hover,
+main .dragao:hover,
+main .fada:hover,
+main .fantasma:hover,
+main .bug:hover,
+main .lutador,
+main .gelo:hover,
+main .pedra:hover,
+main .psci:hover,
+main .sombrio:hover,
+main .metal:hover,
+main .ground:hover,
+main .eletrico:hover,
+header .gen-1:hover,
+header .gen-2:hover,
+header .gen-3:hover,
+header .todas:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main{
+    padding: 25px;
+}
+
+.df{
+    width: 60px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    color: black;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    gap: 35px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.gen-1,
+.gen-2,
+.gen-3,
+.todas{
+    color: #000000;
+    font-weight: 500; 
+    text-decoration-line: none;
+}
+
+.list-pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.planta{
+    background-image: url(./background/capa-planta\ 5.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.fogo{
+    background-image: url(./background/capa-fogo\ 4.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.agua{
+    background-image: url(./background/capa-agua\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.normal{
+    background-image: url(./background/capa-normal\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.veneno{
+    background-image: url(./background/capa-venenoso\ 4.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.eletrico{
+    background-image: url(./background/pokemon-tipo-eletrico\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.ground{
+    background-image: url(./background/capa-terrestre\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.fada{
+    background-image: url(./background/capa-fada\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;
+}
+
+.bug{
+    background-image: url(./background/capa-inseto\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px; 
+}
+
+.lutador{
+    background-image: url(./background/capa-lutador\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px; 
+}
+
+.psci{
+    background-image: url(./background/capa-psíquico\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;  
+}
+
+.pedra{
+    background-image: url(./background/capa-pedra\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;   
+}
+
+.fantasma{
+    background-image: url(./background/capa-fantasma\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px; 
+}
+
+.gelo{
+    background-image: url(./background/capa-gelo\ 4.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px; 
+}
+
+.dragao{
+    background-image: url(./background/capa-dragão\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;  
+}
+
+.sombrio{
+    background-image: url(./background/capa-sombrio\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;  
+}
+
+.metal{
+   background-image: url(./background/capa-aço\ 3.svg);
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-height: 500px;   
+}
