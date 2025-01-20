@@ -1,34 +1,50 @@
-# Pokedex 1 geração# <h1>Projeto Tarefas</h1> 
+# React + TypeScript + Vite
 
-> Status do Projeto:  :warning: (em desenvolvimento)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-### Tópicos
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-:small_blue_diamond:[Visão Geral](#visão-geral)
+## Expanding the ESLint configuration
 
-:small_blue_diamond:[Tecnologias Utilizadas](#tecnologias-utilizadas)
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-:small_blue_diamond:[Funcionalidades Principais](#funcionalidades-principais)
+- Configure the top-level `parserOptions` property like this:
 
-:small_blue_diamond:[Como iniciar](#como-iniciar)
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-<h3>Refatrnado o meu primeiro porjeto com React e TypeScript</h3>
-
-<p align="justify">
-  Este é um projeto front-end pessoal para aplicar conhecimento com React, Typescript e ReactQuery
-</p>
-
-
-## Visão Geral
-
-O objetivo principal deste projeto é aprodundar em conceitos de fornt end, aplicando conehcimentos dem React, TypeScript e REactQuery. A aplicação é uma listagem dos pokemons que mostra algumas informações dos pokemons da primeira geração.
-## Tecnologias Utilizadas
-
-<h4>FrontEnd</h4>
-:heavy_check_mark: React: Utilizamos o React para criar uma UI declarativa e componentizada. <br>
-:heavy_check_mark: Material Mui: Utilizamos o Material Mui para usar componente <br>
-:heavy_check_mark: ReactQuery: Utilizamos o ReactQuery para cachear dados para melhorar a performace da aplicação  <br>
-:heavy_check_mark: TypeScript: Utilizamos o Typescript para deixar o Javascript mais seguro e fácil de manter <br>
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
